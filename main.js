@@ -11,29 +11,42 @@ menuHamIcon.addEventListener('click', toggleMobileMenu);
 shoppingCart.addEventListener('click', toggleproductDetail);
 
 
+
 function toggleDesktopMenu() {
-    desktopMenu.classList.toggle('inactive');
+    const desactiv = productDetail.classList.contains('inactive');
+    
+    if (desactiv) {
+        desktopMenu.classList.toggle('inactive');
+    } else {
+        productDetail.classList.add('inactive');
+        desktopMenu.classList.toggle('inactive');
+    }
+    
 }
+
 
 function toggleMobileMenu() {
     const desactiv = productDetail.classList.contains('inactive');
     
+    
+
     if (desactiv) {
         mobileMenu.classList.toggle('inactive');
-    } else {
-        productDetail.classList.add('inactive');
+    } else  {
+        productDetail.classList.add('inactive');  
         mobileMenu.classList.toggle('inactive');
     }
-   
+    
 }
 function toggleproductDetail() {
     const desactiv = mobileMenu.classList.contains('inactive');
-
+    
     if (desactiv) {
         productDetail.classList.toggle('inactive');
     } else {
         mobileMenu.classList.add ('inactive');
         productDetail.classList.toggle('inactive');
     }
+    desktopMenu.classList.add('inactive');
     
 }
