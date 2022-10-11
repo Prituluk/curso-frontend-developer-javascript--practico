@@ -20,6 +20,11 @@
   .inactive {
     display: none;
   }
+
+  .top {
+    z-index: 1;
+    
+  }
   
 
 /* Nav bar general*/
